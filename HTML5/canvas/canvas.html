@@ -10,13 +10,52 @@
             if (canvas.getContext) //檢查瀏覽器是否支援canvas
             {
                 var cvs = canvas.getContext("2d");
-                cvs.strokeRect(50, 80, 100, 80); //左上角座標設為(50,80),畫出100 X 80像素的矩形
+                //矩形============================================
+                cvs.strokeStyle = "#0000ff"; //指定線條的樣式
+                cvs.strokeRect(50, 50, 150, 150); //左上角座標設為(50,50),畫出150 X 150像素的矩形
+
+                cvs.fillStyle = "#ee8888"; //指定填滿的顏色
+                cvs.fillRect(75, 75, 100, 100); //描繪填色矩形
+
+                cvs.clearRect(100, 100, 50, 50); //描繪透明矩形(擦除)
+                //文字============================================
+                cvs.strokeStyle = "#ff0000";
+                cvs.font = "15pt sans-serif"; //指定字體大小種類，預設為"7.5pt sans-serif"
+                cvs.strokeText("HTML5繪本", 320, 90, 300); //描繪文字的輪廓線，座標設為(290,90)，寬度最大值300
+
+                cvs.fillStyle = "#00ff00";
+                cvs.fillText("HTML5繪本", 320, 120, 300); //描繪文字
+
+                cvs.fillStyle = "#0000ff";
+                cvs.textAlign = "start"; //指定x座標位於文字的開始位置(預設值)
+                cvs.fillText("[start]", 320, 150, 300);
+                cvs.textAlign = "end"; //指定x座標位於文字的結束位置
+                cvs.fillText("[end]", 320, 150, 300);
+                cvs.textAlign = "left"; //指定x座標位於文字左端
+                cvs.fillText("[left]", 320, 170, 300);
+                cvs.textAlign = "center"; //指定x座標位於文字中心
+                cvs.fillText("[center]", 320, 190, 300);
+                cvs.textAlign = "right"; //指定x座標位於文字右端
+                cvs.fillText("[right]", 320, 170, 300);
+
+                cvs.textBaseline = "top";
+                cvs.fillText("[top]", 320, 200, 300) //指定y座標位於em-square的上方(em-square = 大寫M所置放的矩陣)
+                cvs.textBaseline = "hanging";
+                cvs.fillText("[hanging]", 470, 200, 300) //指定y座標位於印度系文字的基線(基線在上方)
+                cvs.textBaseline = "middle";
+                cvs.fillText("[middle]", 620, 200, 300) //指定y座標位於文字的中間
+                cvs.textBaseline = "alphabetic";
+                cvs.fillText("[alphabetic]", 770, 200, 300) //指定y座標位於拉丁字母的基線(預設值)
+                cvs.textBaseline = "ideographic";
+                cvs.fillText("[ideographic]", 920, 200, 300) //指定y座標位於中文等象形文字的基線(基線在下方)
+                cvs.textBaseline = "bottom";
+                cvs.fillText("[bottom]", 1070, 200, 300) //指定y座標位於文字的下方
             }
         }
     </script>
 </head>
 <body onload="draw();">
-    <canvas id="canvas1" width="300" height="300">
+    <canvas id="canvas1" width="1200" height="1200">
         canvas元素內的文字會在瀏覽器不支援canvas元素時顯示
         canvas元素預設寬300高150
     </canvas>
