@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script>
+        function draw() {
+            var canvas = document.getElementById("canvas1");
+            if (canvas.getContext) //檢查瀏覽器是否支援canvas
+            {
+                var cvs = canvas.getContext("2d");
+                cvs.strokeRect(50, 80, 100, 80); //左上角座標設為(50,80),畫出100 X 80像素的矩形
+            }
+        }
+    </script>
+</head>
+<body onload="draw();">
+    <canvas id="canvas1" width="300" height="300">
+        canvas元素內的文字會在瀏覽器不支援canvas元素時顯示
+        canvas元素預設寬300高150
+    </canvas>
+</body>
+</html>
