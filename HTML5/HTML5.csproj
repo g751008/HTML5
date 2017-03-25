@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="canvas\canvas.html" />
+    <Content Include="Default.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
