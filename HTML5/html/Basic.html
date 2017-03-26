@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html> <!--宣告這是HTML文件(HTML5)-->
-<html><!--<html>~</html>表示HTML範圍-->
-<head><!--<head>~</head>描述HTML文件的整體資訊-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+﻿<!DOCTYPE html>
+ <!--宣告這是HTML文件(HTML5)-->
+<html>
+<!--<html>~</html>表示HTML範圍-->
+<head>
+    <!--<head>~</head>描述HTML文件的整體資訊-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
-<body><!--<body>~</body>描述HTML文件的內容-->
+<body>
+    <!--<body>~</body>描述HTML文件的內容-->
     <!--Web瀏覽器從這部分開始顯示-->
     這是以HTML寫成的檔案，在Web瀏覽器的網址列輸入路徑，就能將HTML檔案開啟成網頁。
     <>符號叫做標籤，標籤中可指定屬性，讓標籤擁有任務或資訊。<br />
@@ -23,14 +27,16 @@
     <br /><br />
     何謂<p>p段落</p>標籤<!--<p>顯示段落，沒有其他能夠表示的元素時使用-->
     <br /><br />
-    用br<br/>換行<!--<br/>換行-->
+    用br<br />換行<!--<br/>換行-->
     <br /><br />
-    <ul><!--<ul>是沒有編號的條列清單-->
+    <ul>
+        <!--<ul>是沒有編號的條列清單-->
         <li>ul</li>
         <li>ul</li>
     </ul>
     <br /><br />
-    <ol><!--<ol>是有編號的條列清單-->
+    <ol>
+        <!--<ol>是有編號的條列清單-->
         <li>ol</li>
         <li>ol</li>
     </ol>
@@ -39,6 +45,14 @@
     <br /><br />
     span<span lang="en">span</span>span<!--顯示內容關聯性。行內元素不會在前後換行-->
     <br /><br />
-    <img src="../img/git.png" /><!--顯示圖片。src屬性指定圖檔路徑，格式含png、gif、jpeg，也可以用alt屬性指定沒有圖片時代替顯示的文字-->
+    <img src="../img/git.png" height="50" width="50" /><!--顯示圖片。src屬性指定圖檔路徑，格式含png、gif、jpeg，也可以用alt屬性指定沒有圖片時代替顯示的文字-->
+    <br /><br />
+    <table border="1" width="90%" cellspacing="3" cellpadding="5"><!--table是表格，height以像素指定表格高度，width以像素或佔瀏覽器百分比指定表格寬度，cellspacing以像素指定儲存格之間的間隔，cellpadding以像素指定儲存格與周圍的留白，border以像素指定框線寬度-->
+        <caption>table</caption><!--caption是表格的標題-->
+        <tr><th height="50">th1</th><th width="50%">th2</th><th>th3</th></tr><!--tr是表格列，th是標題列儲存格-->
+        <tr><td>td1-1</td><td>td1-2</td><td>td1-3</td></tr><!--項目列，td是項目列儲存格，rowspan縱向合併儲存格結合數量，colspan橫向合併儲存格結合數量，height以像素指定高度，width以像素或百分比指定寬度-->
+        <tr><td rowspan="2">td2-1</td><td colspan="2">td2-2</td></tr>
+        <tr><td>td3-2</td><td>td3-3</td></tr>
+    </table>
 </body>
 </html>
