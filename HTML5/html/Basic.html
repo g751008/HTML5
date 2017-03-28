@@ -1,12 +1,19 @@
 ﻿<!DOCTYPE html>
- <!--宣告這是HTML文件(HTML5)-->
+ <!--宣告這是HTML文件(HTML5)，可以告訴瀏覽器使用的HTML版本，以便瀏覽器使用正確引擎來產生網頁內容，DOCTYPE可以指出HTML DTD規格，DTD原本是XML1.0規格的一部分，用來驗證文件內容元素架構、元素標籤和屬性是否符合定義規則，
+     HTML5:<!DOCTYPE html> XHTML1.1:<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">，!DOCTYPE之前不可有空白否則瀏覽器可能產生錯誤。-->
 <html>
-<!--<html>~</html>表示HTML範圍-->
+<!--<html>~</html>表示HTML範圍，擁有<head>和<body>兩個子標籤，可以使用lang屬性指定網頁使用的語言(en(英)zh(中)fr(法)de(德)it(義)ja(日)en-US(美式中文)zh-TW(正體中文))-->
 <head>
-    <!--<head>~</head>描述HTML文件的整體資訊-->
+    <!--<head>~</head>描述HTML文件的整體資訊，包含<title> <meta> <script> <style>標籤-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <meta charset="utf-8" />
+    <title>標題</title><!--必須元素，顯示於瀏覽器上方或標籤頁的標題文字-->
+    <meta charset="utf-8" /><!--提供網頁的metadata資訊例如網頁描述、關鍵字、作者、最近修改日期等，charset指定網頁編碼為utf-8，此為HTML5寫法，之前版本的寫法是<meta http-equiv="content-type" content="text/html;charset=UTF-8">-->
+    <meta name="description" content="Head元素" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="CCL" />
+    <script></script><!--定義客戶端的腳本程式碼，HTML5不用指定type屬性-->
+    <style></style><!--定義網頁套用的CSS樣式-->
+    <link rel="alternate" /><!--連結外部資源的檔案，主要連接樣式表檔案-->
 </head>
 <body>
     <!--<body>~</body>描述HTML文件的內容-->
