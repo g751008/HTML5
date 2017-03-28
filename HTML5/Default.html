@@ -23,7 +23,19 @@
     <br /><br />
     動態網頁 = 可依用戶端要求執行程式並傳送結果的網頁(另一方面，只能傳回固定內容則稱靜態網頁)。
     <br /><br />
-    CGI(Common Gateway Interface) = 依照來自Web瀏覽器的要求啟動Web伺服器上的程式的機制，用於CGI的程式是以Perl或C語言之類的程式語言所寫成。
+    伺服端網頁技術是在Web伺服器上執行的應用程式，而不是在客戶端瀏覽器執行，有下列幾種：
+    <br />
+    共通閘道介面CGI(Common Gateway Interface) = 依照來自Web瀏覽器的要求啟動Web伺服器上的程式的機制，用於CGI的程式是以Perl或C語言之類的程式語言所寫成，需先編譯成可執行檔，以便在伺服端執行。
+    <br />
+    ASP(Active Server Pages) = 名稱直譯是一種讓網頁在伺服器上動起來的技術，能夠讓Script語言直接內嵌網頁，在伺服端產生動態的網頁內容並以直譯方式執行。
+    <br />
+    ASP.NET伺服端網頁技術屬於微軟.NET Framework技術的成員，以CLR(Common Language Runtime)架構的.NET程式設計平台，可以讓我們使用CLR語言在伺服端建立Web應用程式。
+    <br />
+    .NET Framework是微軟的程式開發平台，由CLR和.NET Framework類別函數庫(.NET Framework Class Library，.NET FCL，提供龐大類別以供建立各種不同的應用程式，有支援.NET Framework的語言都可以使用)組成，使用.NET Framework支援的程式語言編寫的程式碼可使用.NET編譯程式進行編譯成MSIL(Microsoft Intermediat Language，一種中間程式語言而非CPU可執行的機器語言)，執行程式時CLR再使用JIT(Just In Time)編譯程式將MSIL轉換成機器語言來執行，因此只須作業系統安裝CLR即可跨Windows平台執行。
+    <br /><br />
+    PHP(PHP:Hypertext Preprocessor):一種開放原始碼(Open Source)的伺服端Script語言，可內嵌於HTML網頁，主要使用在Linux/Unix作業系統的伺服端網頁技術，目前也支援Windows作業系統。
+    <br /><br />
+    JSP(Java Server Pages):Java家族中和ASP一較長短的網頁技術，結合HTML和Java Servlet的伺服端網頁技術，以Java來說，Java Applet是下載到客戶端執行的程式檔，Java Servlet是在伺服端執行。
     <br /><br />
     伺服器端腳本(Server Side Script) = 先在Web伺服器端的HTML檔案中寫上腳本(Script;簡單的程式)，再將執行結果作為HTML一部分傳回給Web瀏覽器，此為伺服器端腳本。
     <br /><br />
