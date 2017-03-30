@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
- <!--宣告這是HTML文件(HTML5)，可以告訴瀏覽器使用的HTML版本，以便瀏覽器使用正確引擎來產生網頁內容，DOCTYPE可以指出HTML DTD規格，DTD原本是XML1.0規格的一部分，用來驗證文件內容元素架構、元素標籤和屬性是否符合定義規則，
-     HTML5:<!DOCTYPE html> XHTML1.1:<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">，!DOCTYPE之前不可有空白否則瀏覽器可能產生錯誤。-->
+<!--宣告這是HTML文件(HTML5)，可以告訴瀏覽器使用的HTML版本，以便瀏覽器使用正確引擎來產生網頁內容，DOCTYPE可以指出HTML DTD規格，DTD原本是XML1.0規格的一部分，用來驗證文件內容元素架構、元素標籤和屬性是否符合定義規則，
+    HTML5:<!DOCTYPE html> XHTML1.1:<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN">，!DOCTYPE之前不可有空白否則瀏覽器可能產生錯誤。-->
 <html>
 <!--<html>~</html>表示HTML範圍，擁有<head>和<body>兩個子標籤，可以使用lang屬性指定網頁使用的語言(en(英)zh(中)fr(法)de(德)it(義)ja(日)en-US(美式中文)zh-TW(正體中文))-->
 <head>
@@ -18,7 +18,6 @@
 <body>
     <!--<body>~</body>描述HTML文件的內容-->
     <!--Web瀏覽器從這部分開始顯示-->
-
     這是以HTML寫成的檔案，在Web瀏覽器的網址列輸入路徑，就能將HTML檔案開啟成網頁。
     <>符號叫做標籤，標籤中可指定屬性，讓標籤擁有任務或資訊。<br />
     <a href="#h1">h1標題</a><br />
@@ -48,7 +47,8 @@
         <li>ul</li>
     </ul>
     <br /><br />
-    <ol><!--start屬性指定編號的開始，type屬性指定編號是數字英文等(例如1、A、a、I、i)，reversed屬性可以指定編號反向由大到小-->
+    <ol>
+        <!--start屬性指定編號的開始，type屬性指定編號是數字英文等(例如1、A、a、I、i)，reversed屬性可以指定編號反向由大到小-->
         <!--<ol>是有編號的條列清單-->
         <li>ol</li>
         <li>ol</li>
@@ -62,19 +62,24 @@
         <dd>網頁製作語言</dd>
     </dl>
     <br /><br />
-    div<div lang="en">div</div>div<!--顯示內容關聯性，lang屬性表示該範圍的語言。區塊元素會在前後換行-->
+
+    div<div lang="en">div</div>div<!--結構元素如同透明方框，顯示內容關聯性，建立文件結構和方便套用CSS，lang屬性表示該範圍的語言。區塊元素會在前後換行-->
     <br /><br />
-    span<span lang="en">span</span>span<!--顯示內容關聯性。行內元素不會在前後換行-->
+    span<span lang="en">span</span>span<!--結構元素如同透明方框，顯示內容關聯性，建立文件結構和方便套用CSS。行內元素不會在前後換行-->
     <br /><br />
     <img src="../img/git.png" height="50" width="50" /><!--顯示圖片。src屬性指定圖檔路徑，格式含png、gif、jpeg，也可以用alt屬性指定沒有圖片時代替顯示的文字-->
     <br /><br />
-    
-    <table border="1" width="90%" cellspacing="3" cellpadding="5"><!--table是表格，height以像素指定表格高度，width以像素或佔瀏覽器百分比指定表格寬度，cellspacing以像素指定儲存格之間的間隔，cellpadding以像素指定儲存格與周圍的留白，border以像素指定框線寬度-->
+
+    <table border="1" width="90%" cellspacing="3" cellpadding="5">
+        <!--table是表格，height以像素指定表格高度，width以像素或佔瀏覽器百分比指定表格寬度，cellspacing以像素指定儲存格之間的間隔，cellpadding以像素指定儲存格與周圍的留白，border以像素指定框線寬度-->
         <caption>table</caption><!--caption是表格的標題-->
-        <tr><th height="50">th1</th><th width="50%">th2</th><th>th3</th></tr><!--tr是表格列，th是標題列儲存格-->
-        <tr><td>td1-1</td><td>td1-2</td><td>td1-3</td></tr><!--項目列，td是項目列儲存格，rowspan縱向合併儲存格結合數量，colspan橫向合併儲存格結合數量，height以像素指定高度，width以像素或百分比指定寬度-->
-        <tr><td rowspan="2">td2-1</td><td colspan="2">td2-2</td></tr>
-        <tr><td>td3-2</td><td>td3-3</td></tr>
+        <thead><tr><th height="50" id="th1">th1</th><th width="50%">th2</th><th>th3</th></tr></thead><!--tr是表格列，th是標題列儲存格-->
+        <tbody>
+            <tr><td headers="th1">td1-1</td><td>td1-2</td><td>td1-3</td></tr><!--項目列，td是項目列儲存格，rowspan縱向合併儲存格結合數量，colspan橫向合併儲存格結合數量，height以像素指定高度，width以像素或百分比指定寬度，headers對應標題儲存格的id屬性值-->
+            <tr><td rowspan="2">td2-1</td><td colspan="2">td2-2</td></tr>
+            <tr><td>td3-2</td><td>td3-3</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3" style="text-align:center">tfoot</td></tr></tfoot><!--thead是標題內容，tbody是本文內容，tfoot是註腳內容-->
     </table>
 
     <div>
