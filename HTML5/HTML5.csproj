@@ -98,7 +98,6 @@
     <Content Include="Default.html" />
     <Content Include="html\basic.html" />
     <Content Include="html\cssBasic.html" />
-    <Content Include="html\html5Basic.html" />
     <Content Include="img\git.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
