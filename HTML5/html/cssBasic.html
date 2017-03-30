@@ -4,13 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <meta charset="utf-8" />
-    <style type="text/css"> /*<style>是描述樣式的部分*/        
+    <style type="text/css"> /*<style>是描述樣式的部分，HTML5可省略type="text/css，定義在head為內建網頁的CSS(Embedded Style Sheet)影響整頁網頁*/        
         span { /*此部分稱為選擇器，套用樣式的標籤必須指定id或class名稱*/
             color: red; /*以color屬性將文字指定為紅色*/
         }
     </style>
+    <link rel="stylesheet" href="" type="text/css" /><!--連結外部樣式表檔案，外部連接的CSS(External Style Sheet)，可套用在整個網站的網頁，rel屬性是連接的檔案類型(stylesheet就是css)，href屬性指定連接的樣式檔路徑位置，type屬性是連接類型(HTML5可省略)-->
 </head>
 <body>
     <span>color: red</span>
+    <br />
+    <span style="color:blue">color: blue</span><!--局部套用的CSS(In-Line Style Sheets)影響單一標籤-->
 </body>
 </html>
