@@ -11,8 +11,42 @@
     <meta name="description" content="Head元素" />
     <meta name="keywords" content="HTML" />
     <meta name="author" content="CCL" />
-    <script></script><!--定義客戶端的腳本程式碼，HTML5不用指定type屬性-->
-    <style></style><!--定義網頁套用的CSS樣式-->
+
+    <script></script><!--script定義客戶端的腳本程式碼，HTML5不用指定type屬性-->
+    <!--style定義網頁套用的CSS樣式-->
+    <style>
+        @media screen and (max-width:520px) {
+            /*指定目標裝置螢幕的screen媒體最大寬度是520px，如果符合條件就套用CSS規則(例如PC瀏覽器調整視窗尺寸至小於520px時)*/
+            aside ul {
+                list-style: none; /*刪除清單項目前的符號*/
+            }
+
+                aside ul a {
+                    padding-left: 30px;
+                    background: url(../img/mail.png) left center no-repeat; /*在超連結前面新增小圖示*/
+                }
+        }
+
+        @media screen and (max-width:768px) and (min-width:520px), (min-width:1150px) {
+            /*螢幕寬度尺寸520~768px之間 或 大於1150px*/
+            aside ul li a:before { /*a:before = a標籤之前*/
+                content: "Hot!"; /*加上文字內容*/
+                font-size: 12px;
+                font-weight: bold;
+                color: red;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            /*螢幕寬度尺寸大於768px*/
+            aside ul li a:after { /*a:after = a標籤之後*/
+                content: "("attr(data-title)")"; /*加上data-title屬性的值作為文字內容*/
+                font-size: 14px;
+                font-weight: bold;
+                color: brown;
+            }
+        }
+    </style>
     <link rel="alternate" /><!--連結外部資源的檔案，主要連接樣式表檔案-->
 </head>
 <body>
@@ -110,8 +144,11 @@
     <br />
     <aside>
         aside<!--aside是非網頁主題，但相關的內容片斷-->
-        <ul>
-            <li><a>aside選單</a></li>
+        <ul id="nav">
+            <li><a data-title="Item1">aside選單1</a></li><!--data-*屬性用來儲存網頁資訊，例如此處儲存英文的項目標題-->
+            <li><a data-title="Item2">aside選單2</a></li>
+            <li><a data-title="Item3">aside選單3</a></li>
+            <li><a data-title="Item4">aside選單4</a></li>
         </ul>
     </aside>
     <footer>
