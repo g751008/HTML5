@@ -8,6 +8,47 @@
         span { /*此部分稱為選擇器，套用樣式的標籤必須指定id或class名稱*/
             color: red; /*以color屬性將文字指定為紅色*/
         }
+
+        /* CSS選擇器:
+            .class - 例如.test 選擇所有class=test的元素
+            #id - 例如#test 選擇所有id=test的元素
+            element - 例如p 選擇所有p元素
+            element, element - 例如div, p 選擇所有div元素和p元素
+            element element - 例如div p 選擇是div後代子孫的p元素
+            [attribute] - 例如[count] 選擇所有擁有count屬性的元素
+            [attribute=value] - 例如[target=_blank] 選擇所有擁有target=_blank屬性的元素
+            [attribute~=value] - 例如[title~=flower] 選擇所有擁有title屬性且值包含flower的元素
+            [attribute|=value] - 例如[lang|=en] 選擇所有擁有lang屬性且值開頭為en的元素
+        */
+
+        /* CSS的樣式屬性:            
+            -尺寸 
+            width指定元素寬度、
+            height指定元素高度
+
+            -字型 
+            font-size指定字型尺寸(可直接指定pt)、
+            font-family指定字型(例如標楷體)、
+            font-style指定字型樣式(normal、italic或oblique)、
+            font-weight指定字型粗細(normal、bold、bolder、lighter或100~900)
+
+            -色彩 
+            color指定前景色(色彩名稱或16進位值)、
+            background-color指定背景顏色(色彩名稱或16進位值)、
+            background-image指定背景顯示的圖片、
+            background-position指定背景圖的位置(百分比、點數、top、center、bottom、left、right)
+            
+            -框線 
+            border-color顯示的框線色彩、
+            border-style是框線樣式(none、dotted、dashed、solid、double、groove、ridge、inset、outset)
+
+            -CSS3 
+            text-shadow替文字增加陰影效果建立立體字、
+            box-shadow替元素建立3D陰影效果(Safari、Chrome是-webkit-box-shadow;FireFox是-moz-box-shadow)、
+            border-radius建立圓角方框顯示效果(Safari、Chrome是-webkit-字頭;FireFox是-moz-字頭)、
+            column-count指定多欄版面配置的欄數(Safari、Chrome是-webkit-字頭;FireFox是-moz-字頭)、
+            column-gap指定多欄版面配置中各欄的間距(Safari、Chrome是-webkit-字頭;FireFox是-moz-字頭)
+        */
     </style>
     <link rel="stylesheet" href="" type="text/css" /><!--連結外部樣式表檔案，外部連接的CSS(External Style Sheet)，可套用在整個網站的網頁，rel屬性是連接的檔案類型(stylesheet就是css)，href屬性指定連接的樣式檔路徑位置，type屬性是連接類型(HTML5可省略)-->
 </head>
